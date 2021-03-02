@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app_corona/home.dart';
+import 'package:toast/toast.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -28,8 +29,11 @@ class _LoginPageState extends State<LoginPage> {
     RegExp regex = new RegExp(pattern);
     if (!regex.hasMatch(value)) {
       return 'Email format is invalid';
-    } else {
-      return null;
+    } else { Toast.show("Bad Credentials",
+        context,
+        duration: Toast.LENGTH_SHORT,
+        gravity: Toast.BOTTOM
+    );
     }
   }
 
@@ -37,7 +41,11 @@ class _LoginPageState extends State<LoginPage> {
     if (value.length < 8) {
       return 'Password must be longer than 8 characters';
     } else {
-      return null;
+      Toast.show("Bad Credentials",
+          context,
+          duration: Toast.LENGTH_SHORT,
+          gravity: Toast.BOTTOM
+      );
     }
   }
 
@@ -87,12 +95,18 @@ class _LoginPageState extends State<LoginPage> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) => HomePage(
-                                          title: result["fname"] +
-                                              "'s Tasks",
+                                          title: result["fname"]
+                                          ,
                                           uid: currentUser.uid,
                                         ))))
                                 .catchError((err) => print(err)))
                                 .catchError((err) => print(err));
+                          }else {
+                            Toast.show("Bad credentials",
+                            context,
+                            duration: Toast.LENGTH_SHORT,
+                              gravity: Toast.BOTTOM
+                            );
                           }
                         },
                       ),
