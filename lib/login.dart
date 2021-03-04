@@ -3,9 +3,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app_corona/home.dart';
 import 'package:toast/toast.dart';
+import 'package:app_corona/widget/button.dart';
+import 'package:app_corona/widget/first.dart';
+import 'package:app_corona/widget/forgot.dart';
+import 'package:app_corona/widget/inputEmail.dart';
+import 'package:app_corona/widget/password.dart';
+import 'package:app_corona/widget/textLogin.dart';
+import 'package:app_corona/widget/verticalText.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({Key key}) : super(key: key);
+
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -52,73 +59,84 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Login"),
-        ),
+
         body: Container(
-            padding: const EdgeInsets.all(20.0),
-            child: SingleChildScrollView(
-                child: Form(
-                  key: _loginFormKey,
-                  child: Column(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.blueGrey, Colors.lightBlueAccent]),
+            ),
+           // padding: const EdgeInsets.all(20.0),
+            child: ListView(
                     children: <Widget>[
-                      TextFormField(
-                        decoration: InputDecoration(
-                            labelText: 'Email*', hintText: "john.doe@gmail.com"),
-                        controller: emailInputController,
-                        keyboardType: TextInputType.emailAddress,
-                        validator: emailValidator,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                            labelText: 'Password*', hintText: "********"),
-                        controller: pwdInputController,
-                        obscureText: true,
-                        validator: pwdValidator,
-                      ),
-                      RaisedButton(
-                        child: Text("Login"),
-                        color: Theme.of(context).primaryColor,
-                        textColor: Colors.white,
-                        onPressed: () {
-                          if (_loginFormKey.currentState.validate()) {
-                            FirebaseAuth.instance
-                                .signInWithEmailAndPassword(
-                                email: emailInputController.text,
-                                password: pwdInputController.text)
-                                .then((currentUser) => Firestore.instance
-                                .collection("users")
-                                .document(currentUser.uid)
-                                .get()
-                                .then((DocumentSnapshot result) =>
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => HomePage(
-                                          title: result["fname"]
-                                          ,
-                                          uid: currentUser.uid,
-                                        ))))
-                                .catchError((err) => print(err)))
-                                .catchError((err) => print(err));
-                          }else {
-                            Toast.show("Bad credentials",
-                            context,
-                            duration: Toast.LENGTH_SHORT,
-                              gravity: Toast.BOTTOM
-                            );
-                          }
-                        },
-                      ),
-                      Text("Don't have an account yet?"),
-                      FlatButton(
-                        child: Text("Register here!"),
-                        onPressed: () {
-                          Navigator.pushNamed(context, "/register");
-                        },
-                      )
-                    ],
-                  ),
-                ))));
+                      Column(
+                    children: <Widget>[
+                      Row(children: <Widget>[
+                        VerticalText(),
+                        TextLogin(),
+                      ]),
+                      InputEmail(),
+                      PasswordInput(),
+                      ButtonLogin(),
+                      FirstTime(),
+                      // TextFormField(
+                      //   decoration: InputDecoration(
+                      //       labelText: 'Email*', hintText: "john.doe@gmail.com"),
+                      //   controller: emailInputController,
+                      //   keyboardType: TextInputType.emailAddress,
+                      //   validator: emailValidator,
+                      // ),
+                      // TextFormField(
+                      //   decoration: InputDecoration(
+                      //       labelText: 'Password*', hintText: "********"),
+                      //   controller: pwdInputController,
+                      //   obscureText: true,
+                      //   validator: pwdValidator,
+                      // ),
+                      // RaisedButton(
+                      //   child: Text("Login"),
+                      //   color: Theme.of(context).primaryColor,
+                      //   textColor: Colors.white,
+                      //   onPressed: () {
+                      //     if (_loginFormKey.currentState.validate()) {
+                      //       FirebaseAuth.instance
+                      //           .signInWithEmailAndPassword(
+                      //           email: emailInputController.text,
+                      //           password: pwdInputController.text)
+                      //           .then((currentUser) => Firestore.instance
+                      //           .collection("users")
+                      //           .document(currentUser.uid)
+                      //           .get()
+                      //           .then((DocumentSnapshot result) =>
+                      //           Navigator.pushReplacement(
+                      //               context,
+                      //               MaterialPageRoute(
+                      //                   builder: (context) => HomePage(
+                      //                     title: result["fname"]
+                      //                     ,
+                      //                     uid: currentUser.uid,
+                      //                   ))))
+                      //           .catchError((err) => print(err)))
+                      //           .catchError((err) => print(err));
+                      //     }else {
+                      //       Toast.show("Bad credentials",
+                      //       context,
+                      //       duration: Toast.LENGTH_SHORT,
+                      //         gravity: Toast.BOTTOM
+                      //       );
+                      //     }
+                      //   },
+                      // ),
+                      // Text("Don't have an account yet?"),
+                      // FlatButton(
+                      //   child: Text("Register here!"),
+                      //   onPressed: () {
+                      //     Navigator.pushNamed(context, "/register");
+                      //   },
+                      // )
+                       ],
+                      )],
+                )));
   }
 }

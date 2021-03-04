@@ -50,10 +50,11 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: Center(
-        child: Container(
+      body:
+        new Container(
+
             padding: const EdgeInsets.all(20.0),
-            child: StreamBuilder<QuerySnapshot>(
+            child: Container( child: StreamBuilder<QuerySnapshot>(
               stream: Firestore.instance
                   .collection("users")
                   .document(widget.uid)
@@ -78,8 +79,12 @@ class _HomePageState extends State<HomePage> {
                     );
                 }
               },
-            )),
-      ),
+            )
+            ),
+
+        ),
+
+
       floatingActionButton: FloatingActionButton(
         onPressed: _showDialog,
         tooltip: 'Add',
