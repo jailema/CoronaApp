@@ -22,8 +22,8 @@ class UserOld extends StatelessWidget {
             FlatButton(
               padding: EdgeInsets.all(0),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginPage()));
+                Navigator.pop(context);
+
               },
               child: Text(
                 'Sing in',
