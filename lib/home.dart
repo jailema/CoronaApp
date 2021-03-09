@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:app_corona/widget/draw.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -31,29 +32,57 @@ class _HomePageState extends State<HomePage> {
     currentUser = await FirebaseAuth.instance.currentUser();
   }
 
+  Widget _buildCoverImage(Size screenSize) {
+    return Container(
+      height: screenSize.height / 2.3,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/lake.jpg'),
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildProfileImage() {
+    return Center(
+      child: Container(
+        width: 140.0,
+        height: 140.0,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/lake.jpg'),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(80.0),
+          border: Border.all(
+            color: Colors.white,
+            width: 10.0,
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      drawer: NavDrawer(),
       appBar: AppBar(
         title: Text(widget.title),
-        actions: <Widget>[
-          FlatButton(
-            child: Text("Log Out"),
-            textColor: Colors.white,
-            onPressed: () {
-              FirebaseAuth.instance
-                  .signOut()
-                  .then((result) =>
-                  Navigator.pushReplacementNamed(context, "/login"))
-                  .catchError((err) => print(err));
-            },
-          )
-        ],
+
       ),
       body: Center(
-        child: Container(
-            padding: const EdgeInsets.all(20.0),
+        child: Stack(
+            children: <Widget>[
+
+              _buildCoverImage(screenSize),
+              _buildProfileImage(),
+              SafeArea(
+
             child: StreamBuilder<QuerySnapshot>(
+
               stream: Firestore.instance
                   .collection("users")
                   .document(widget.uid)
@@ -67,7 +96,8 @@ class _HomePageState extends State<HomePage> {
                   case ConnectionState.waiting:
                     return new Text('Loading...');
                   default:
-                    return new ListView(
+                    return new  ListView(
+                      padding: const EdgeInsets.only(top: 430),
                       children: snapshot.data.documents
                           .map((DocumentSnapshot document) {
                         return new CustomCard(
@@ -78,15 +108,18 @@ class _HomePageState extends State<HomePage> {
                     );
                 }
               },
-            )),
+            ))]),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _showDialog,
         tooltip: 'Add',
         child: Icon(Icons.add),
       ),
+
     );
   }
+
+
 
   _showDialog() async {
     await showDialog<String>(
