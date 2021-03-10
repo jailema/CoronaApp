@@ -22,7 +22,7 @@ class NavDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.verified_user),
-            title: Text('Profile'),
+            title: Text('Promotions'),
             onTap: () => {Navigator.of(context).pop()},
           ),
           ListTile(
