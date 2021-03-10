@@ -4,38 +4,13 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5760758d-40dd-47d3-a934-9551cbc91349" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/74309d30a4f03c079a8e2d9b1327609e/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/74309d30a4f03c079a8e2d9b1327609e/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/74309d30a4f03c079a8e2d9b1327609e/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/74309d30a4f03c079a8e2d9b1327609e/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/last-build.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/splash.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/splash.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/draw.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widget/draw.dart" afterDir="false" />
-    </list>
+    <list default="true" id="5760758d-40dd-47d3-a934-9551cbc91349" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[29dd828a17017ece]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3_XL_API_29]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -123,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615325146306</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="HomePage listview new design">
+      <created>1615413129697</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615413129697</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -132,7 +114,8 @@
     <MESSAGE value="LoginPage Fixed" />
     <MESSAGE value="Register Completed" />
     <MESSAGE value="SideBar and homepage style" />
-    <option name="LAST_COMMIT_MESSAGE" value="SideBar and homepage style" />
+    <MESSAGE value="HomePage listview new design" />
+    <option name="LAST_COMMIT_MESSAGE" value="HomePage listview new design" />
   </component>
   <component name="WindowStateProjectService">
     <state x="733" y="263" key="#PSD" timestamp="1612903651770">
@@ -155,10 +138,10 @@
       <screen x="0" y="25" width="1920" height="991" />
     </state>
     <state x="827" y="349" key="AndroidCreateResourceDirectoryDialog/0.25.1920.991@0.25.1920.991" timestamp="1614709016603" />
-    <state x="610" y="80" key="CommitChangelistDialog2" timestamp="1615325137339">
+    <state x="610" y="80" key="CommitChangelistDialog2" timestamp="1615413121343">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
-    <state x="610" y="80" key="CommitChangelistDialog2/0.25.1920.991@0.25.1920.991" timestamp="1615325137339" />
+    <state x="610" y="80" key="CommitChangelistDialog2/0.25.1920.991@0.25.1920.991" timestamp="1615413121343" />
     <state width="1683" height="265" key="GridCell.Tab.0.bottom" timestamp="1615412489987">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
@@ -192,10 +175,10 @@
     </state>
     <state x="709" y="163" key="SettingsEditor/0.0.1876.1080@0.0.1876.1080" timestamp="1612903535680" />
     <state x="726" y="175" key="SettingsEditor/0.25.1920.991@0.25.1920.991" timestamp="1614713221340" />
-    <state x="560" y="244" key="Vcs.Push.Dialog.v2" timestamp="1615325211502">
+    <state x="560" y="244" key="Vcs.Push.Dialog.v2" timestamp="1615413135499">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
-    <state x="560" y="244" key="Vcs.Push.Dialog.v2/0.25.1920.991@0.25.1920.991" timestamp="1615325211502" />
+    <state x="560" y="244" key="Vcs.Push.Dialog.v2/0.25.1920.991@0.25.1920.991" timestamp="1615413135499" />
     <state x="932" y="327" width="988" height="490" key="find.popup" timestamp="1615411581739">
       <screen x="0" y="25" width="1920" height="991" />
     </state>
