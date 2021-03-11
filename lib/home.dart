@@ -153,6 +153,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Stack(
+
             children: <Widget>[
               new Transform.translate(
                 offset: new Offset(0.0, MediaQuery.of(context).size.height * 0.1050),
@@ -164,6 +165,7 @@ class _HomePageState extends State<HomePage> {
                   itemCount: data.length,
                   itemBuilder: (BuildContext content, int index) {
                     return AwesomeListItem(
+
                         title: data[index]["title"],
                         content: data[index]["content"],
                         color: data[index]["color"],
@@ -171,6 +173,7 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
+
               new Transform.translate(
                 offset: Offset(0.0, -56.0),
                 child: new Container(
@@ -218,6 +221,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
+
                       ],
                     ),
                   ),
@@ -236,7 +240,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-
+  
 
   _showDialog() async {
     await showDialog<String>(
@@ -292,6 +296,25 @@ class _HomePageState extends State<HomePage> {
               })
         ],
       ),
+    );
+  }
+}
+
+class TypeList extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return new StreamBuilder(
+      stream: Firestore.instance.collection('business').snapshots(),
+      builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot){
+        if(!snapshot.hasData) return new Text('Loading...');
+        return ListView(
+          children: snapshot.data.documents.map((document){
+            return new ExpansionTile(
+              title: new Text(document['Type']),
+            );
+          }).toList(),
+        );
+      },
     );
   }
 }
